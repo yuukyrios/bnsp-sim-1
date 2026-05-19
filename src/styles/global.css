@@ -3,6 +3,8 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
+  color-scheme: light;
+
   --purple:     #533ab7;
   --purple-lt:  #eeedfe;
   --green:      #0e7a5a;
@@ -26,6 +28,10 @@
   font-size: 16px;
 }
 
+html {
+  color-scheme: light;
+}
+
 body {
   font-family: 'Sora', sans-serif;
   background: var(--bg);
@@ -33,9 +39,19 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-a { text-decoration: none; color: inherit; }
-button { font-family: inherit; cursor: pointer; }
-input, select, textarea { font-family: inherit; }
+/* Prevent OS dark mode UA stylesheet from overriding text colors */
+p, span, div, td, th, li, h1, h2, h3, h4, h5, h6, label {
+  color: inherit;
+}
+
+table  { color: var(--text); }
+a      { text-decoration: none; color: inherit; }
+button { font-family: inherit; cursor: pointer; color: inherit; }
+input, select, textarea {
+  font-family: inherit;
+  color: var(--text);
+  background: var(--surface);
+}
 
 /* Scrollbar */
 ::-webkit-scrollbar { width: 5px; height: 5px; }

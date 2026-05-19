@@ -45,7 +45,7 @@
   color: var(--muted); font-weight: 500;
   background: #fafaf8; white-space: nowrap;
 }
-.table tbody td { padding: 13px 16px; font-size: 14px; border-top: 1px solid #f0f0ee; }
+.table tbody td { padding: 13px 16px; font-size: 14px; border-top: 1px solid #f0f0ee; color: var(--text); }
 
 .orderId { font-weight: 600; color: var(--purple); font-size: 13px; }
 .product { color: var(--muted); font-size: 13px; }
