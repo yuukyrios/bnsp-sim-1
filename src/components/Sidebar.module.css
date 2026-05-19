@@ -1,0 +1,79 @@
+.sidebar {
+  width: 220px;
+  background: #1a1228;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  z-index: 50;
+  transition: transform 0.25s ease;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 40;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 1.25rem;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.logoIcon {
+  width: 34px; height: 34px;
+  background: #533ab7;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; flex-shrink: 0;
+}
+
+.logoName { color: #fff; font-weight: 700; font-size: 15px; line-height: 1.2; }
+.logoSub  { color: rgba(255,255,255,0.4); font-size: 11px; }
+
+.closeBtn {
+  display: none;
+  margin-left: auto;
+  background: none; border: none;
+  color: rgba(255,255,255,0.5);
+  cursor: pointer; padding: 4px;
+}
+
+.nav { flex: 1; padding: 1rem 0.75rem; display: flex; flex-direction: column; gap: 2px; }
+
+.navItem {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  color: rgba(255,255,255,0.5);
+  font-size: 14px; font-weight: 500;
+  transition: background 0.15s, color 0.15s;
+}
+.navItem:hover { background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.85); }
+.navItem.active { background: rgba(255,255,255,0.13); color: #fff; }
+
+.userBlock {
+  display: flex; align-items: center; gap: 10px;
+  padding: 1rem 1.25rem;
+  border-top: 1px solid rgba(255,255,255,0.07);
+}
+.avatar {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: #533ab7;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 12px; font-weight: 600; flex-shrink: 0;
+}
+.userName { color: #fff; font-size: 13px; font-weight: 500; }
+.userRole { color: rgba(255,255,255,0.4); font-size: 11px; }
+
+@media (max-width: 768px) {
+  .sidebar { transform: translateX(-100%); }
+  .sidebar.open { transform: translateX(0); }
+  .overlay { display: block; }
+  .closeBtn { display: flex; }
+}

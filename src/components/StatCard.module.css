@@ -1,0 +1,21 @@
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.body { flex: 1; min-width: 0; }
+.label { color: var(--muted); font-size: 13px; margin-bottom: 8px; }
+.value { font-weight: 700; font-size: 22px; color: var(--dark); }
+
+.iconWrap {
+  width: 42px; height: 42px;
+  border-radius: 11px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}

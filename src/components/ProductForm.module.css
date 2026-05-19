@@ -1,0 +1,49 @@
+.form { display: flex; flex-direction: column; gap: 16px; }
+
+.field { display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.field label { font-size: 13px; color: var(--muted); font-weight: 500; }
+
+.field input,
+.field select {
+  padding: 9px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  background: var(--surface);
+  color: var(--text);
+  width: 100%;
+}
+.field input:focus,
+.field select:focus {
+  border-color: var(--purple);
+  box-shadow: 0 0 0 3px rgba(83,58,183,0.12);
+}
+
+.row { display: flex; gap: 12px; }
+
+.actions { display: flex; gap: 10px; margin-top: 8px; }
+
+.cancel {
+  flex: 1; padding: 10px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  font-size: 14px; font-weight: 500;
+  color: var(--muted);
+  transition: background 0.15s;
+}
+.cancel:hover { background: var(--bg); }
+
+.submit {
+  flex: 1; padding: 10px;
+  border-radius: var(--radius);
+  border: none;
+  background: var(--purple);
+  color: #fff;
+  font-size: 14px; font-weight: 600;
+  transition: opacity 0.15s;
+}
+.submit:disabled { opacity: 0.45; cursor: not-allowed; }
+.submit:not(:disabled):hover { opacity: 0.88; }

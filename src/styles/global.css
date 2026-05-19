@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --purple:     #533ab7;
+  --purple-lt:  #eeedfe;
+  --green:      #0e7a5a;
+  --green-lt:   #edfaf4;
+  --blue:       #185fa5;
+  --blue-lt:    #e6f1fb;
+  --amber:      #c47a1a;
+  --amber-lt:   #fff8ec;
+  --red:        #e24b4a;
+  --red-lt:     #fff1f1;
+  --dark:       #1a1228;
+  --surface:    #ffffff;
+  --bg:         #f6f5f2;
+  --border:     #e8e7e3;
+  --text:       #1a1228;
+  --muted:      #888780;
+  --radius:     10px;
+  --radius-lg:  14px;
+  --sidebar-w:  220px;
+  --header-h:   60px;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Sora', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { text-decoration: none; color: inherit; }
+button { font-family: inherit; cursor: pointer; }
+input, select, textarea { font-family: inherit; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #ccc; border-radius: 10px; }
+
+/* Tag / badge */
+.tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Table row hover */
+.tr-hover:hover td { background: #faf9f7; }
+
+/* Utility */
+.truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+@media (max-width: 768px) {
+  :root { --sidebar-w: 0px; }
+}

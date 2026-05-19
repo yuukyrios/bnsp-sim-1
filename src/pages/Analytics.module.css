@@ -1,0 +1,55 @@
+.page { display: flex; flex-direction: column; gap: 16px; }
+
+.statsGrid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+}
+.statCard {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 1.25rem;
+}
+.statLabel { font-size: 13px; color: var(--muted); margin-bottom: 8px; }
+.statValue { font-size: 22px; font-weight: 700; color: var(--dark); }
+
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+.card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 1.5rem;
+}
+.cardTitle { font-weight: 600; font-size: 15px; color: var(--dark); margin-bottom: 1.25rem; }
+
+.barList { display: flex; flex-direction: column; gap: 18px; }
+.barItem {}
+.barMeta { display: flex; justify-content: space-between; margin-bottom: 8px; }
+.barLabel { font-size: 13px; font-weight: 500; }
+.barStat  { font-size: 12px; color: var(--muted); }
+.barTrack { height: 8px; background: var(--bg); border-radius: 8px; overflow: hidden; }
+.barFill  { height: 100%; border-radius: 8px; transition: width 0.6s ease; }
+
+.statusList { display: flex; flex-direction: column; gap: 14px; }
+.statusItem { display: flex; align-items: center; gap: 12px; }
+.statusLabel { font-size: 13px; font-weight: 500; min-width: 90px; text-transform: capitalize; }
+.statusBar { flex: 1; height: 8px; background: var(--bg); border-radius: 8px; overflow: hidden; }
+.statusFill { height: 100%; background: var(--purple); border-radius: 8px; transition: width 0.6s ease; }
+.statusCount { font-size: 13px; font-weight: 600; min-width: 20px; text-align: right; }
+
+.topList { display: flex; flex-direction: column; }
+.topItem {
+  display: flex; align-items: center; gap: 14px;
+  padding: 13px 0; border-bottom: 1px solid #f0f0ee;
+}
+.topItem:last-child { border-bottom: none; }
+.topRank { font-size: 13px; font-weight: 700; color: var(--muted); min-width: 28px; }
+.topEmoji { font-size: 22px; }
+.topInfo { flex: 1; min-width: 0; }
+.topName { font-size: 14px; font-weight: 500; }
+.topCat  { font-size: 12px; color: var(--muted); }
+.topRev  { font-size: 14px; font-weight: 600; text-align: right; }
+
+@media (max-width: 700px) {
+  .statsGrid { grid-template-columns: 1fr 1fr; }
+  .grid2 { grid-template-columns: 1fr; }
+}
+@media (max-width: 420px) {
+  .statsGrid { grid-template-columns: 1fr; }
+}
